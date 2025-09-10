@@ -13,7 +13,7 @@ const itemSchema = new mongoose.Schema({
 
 const pedidoSchema = new mongoose.Schema({
   cliente: { type: String, required: true },
-  telefono: { type: String, required: true },
+  telefono: { type: Number, required: true },
   fecha: { type: Date, default: Date.now },
   items: [itemSchema],
   domicilio: { type: Boolean, default: false },
