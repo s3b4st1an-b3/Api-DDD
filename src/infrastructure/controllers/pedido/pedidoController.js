@@ -1,3 +1,57 @@
+/**
+
+Controlador para gestionar las operaciones HTTP relacionadas con pedidos.
+
+Este módulo actúa como intermediario entre las rutas Express y los casos de uso
+
+de la aplicación, manejando las solicitudes HTTP y devolviendo las respuestas apropiadas.
+
+Implementa los siguientes endpoints:
+
+POST /: Crear un nuevo pedido
+
+GET /: Obtener todos los pedidos
+
+GET /:id: Obtener un pedido por ID
+
+PUT /:id: Actualizar un pedido existente
+
+DELETE /:id: Eliminar un pedido
+
+Cada método del controlador:
+
+Recibe la solicitud HTTP
+
+Ejecuta el caso de uso correspondiente
+
+Maneja los errores adecuadamente
+
+Devuelve la respuesta HTTP con el estado apropiado
+
+@module PedidoController
+
+@requires CreatePedido Caso de uso para crear pedidos
+
+@requires GetPedidos Caso de uso para obtener todos los pedidos
+
+@requires GetPedidoById Caso de uso para obtener pedido por ID
+
+@requires UpdatePedido Caso de uso para actualizar pedidos
+
+@requires DeletePedido Caso de uso para eliminar pedidos
+
+@requires PedidoRepositoryMongo Repositorio para operaciones de base de datos
+
+@example
+
+// Uso en las rutas:
+
+import PedidoController from "./PedidoController.js";
+
+router.post("/", (req, res) => PedidoController.create(req, res));
+*/
+
+
 import CreatePedido from "../../../application/use-cases/pedido/CreatePedido.js";
 import GetPedidos from "../../../application/use-cases/pedido/GetPedidos.js";
 import GetPedidoById from "../../../application/use-cases/pedido/GetPedidoById.js";

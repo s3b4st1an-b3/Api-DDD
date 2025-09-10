@@ -1,3 +1,42 @@
+/**
+
+Definición del modelo de datos para Pedidos y su repositorio MongoDB.
+
+Este módulo define:
+
+Los esquemas de Mongoose para Dirección, Item y Pedido
+
+El modelo de Mongoose para la colección de pedidos
+
+La clase del repositorio que encapsula las operaciones CRUD con la base de datos
+
+Estructura de datos:
+
+Dirección: Información de ubicación (calle, ciudad)
+
+Item: Productos individuales dentro de un pedido (producto, cantidad, precio)
+
+Pedido: Contiene información del cliente, items, domicilio y total
+
+El repositorio proporciona una capa de abstracción sobre las operaciones de MongoDB,
+
+permitiendo un fácil intercambio del mecanismo de persistencia si fuera necesario.
+
+@module PedidoRepository
+
+@requires mongoose ODM (Object Data Modeling) para MongoDB
+
+@example
+
+// Uso del repositorio:
+
+import pedidoRepository from "./pedidoRepositoryMongo.js";
+
+// Crear un nuevo pedido
+
+const nuevoPedido = await pedidoRepository.create(pedidoData);
+*/
+
 import mongoose from "mongoose";
 
 const direccionSchema = new mongoose.Schema({
