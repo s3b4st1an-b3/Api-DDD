@@ -1,4 +1,4 @@
-import { UserModel } from "../../domain/models/User.js";
+import { UserModel } from "../../../domain/models/user/User.js";
 import bcrypt from "bcrypt";
 
 export class UserRepositoryMongo {

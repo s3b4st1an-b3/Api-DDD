@@ -1,9 +1,9 @@
-import CreatePedido from "../../application/use-cases/CreatePedido.js";
-import GetPedidos from "../../application/use-cases/GetPedidos.js";
-import GetPedidoById from "../../application/use-cases/GetPedidoById.js";
-import UpdatePedido from "../../application/use-cases/UpdatePedido.js";
-import DeletePedido from "../../application/use-cases/DeletePedido.js";
-import PedidoRepositoryMongo from "../repositories/PedidoRepositoryMongo.js";
+import CreatePedido from "../../../application/use-cases/pedido/CreatePedido.js";
+import GetPedidos from "../../../application/use-cases/pedido/GetPedidos.js";
+import GetPedidoById from "../../../application/use-cases/pedido/GetPedidoById.js";
+import UpdatePedido from "../../../application/use-cases/pedido/UpdatePedido.js";
+import DeletePedido from "../../../application/use-cases/pedido/DeletePedido.js";
+import PedidoRepositoryMongo from "../../repositories/pedido/PedidoRepositoryMongo.js";
 
 const createPedido = new CreatePedido(PedidoRepositoryMongo);
 const getPedidos = new GetPedidos(PedidoRepositoryMongo);

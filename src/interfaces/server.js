@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import pedidoRoutes from "../infrastructure/routes/pedidoRoutes.js";
-import userRoutes from "../infrastructure/routes/userRoutes.js";
+import pedidoRoutes from "../infrastructure/routes/pedido/pedidoRoutes.js";
+import userRoutes from "../infrastructure/routes/user/userRoutes.js";
 
 
 const app = express();
