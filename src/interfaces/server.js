@@ -43,6 +43,7 @@ import express from "express";
 import cors from "cors";
 import pedidoRoutes from "../infrastructure/routes/pedido/pedidoRoutes.js";
 import userRoutes from "../infrastructure/routes/user/userRoutes.js";
+import clientRoutes from "../infrastructure/routes/client/clientRoutes.js";
 
 
 const app = express();
@@ -51,6 +52,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/pedidos", pedidoRoutes);
-app.use("/api/users", userRoutes)
+app.use("/api/users", userRoutes);
+app.use("/api/clients", clientRoutes);
 
 export default app;
